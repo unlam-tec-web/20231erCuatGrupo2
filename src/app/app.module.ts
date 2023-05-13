@@ -10,6 +10,8 @@ import {RouterOutlet} from "@angular/router";
 import { FooterComponent } from './componentes/comun/footer/footer.component';
 import { RegistrarComponent } from './componentes/registrar/registrar.component';
 import { CarritoComponent } from './componentes/carrito/carrito.component';
+import { CursosComponent } from './componentes/cursos/cursos.component';
+
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { CarritoComponent } from './componentes/carrito/carrito.component';
     FooterComponent,
     RegistrarComponent,
     CarritoComponent,
+    CursosComponent,
   ],
   imports: [
     BrowserModule,

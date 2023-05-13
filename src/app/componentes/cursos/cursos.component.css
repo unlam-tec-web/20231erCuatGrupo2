@@ -1,0 +1,15 @@
+.contenedor{
+  width: 50%;
+  height: 50%;
+  margin: auto;
+}
+.filtrar{
+  margin: 20px 778px;
+}
+.card-price{
+  display: flex;
+  justify-content: space-between;
+}
+.card-title{
+
+}
