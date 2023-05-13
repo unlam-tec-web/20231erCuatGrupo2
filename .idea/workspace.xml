@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2ec0e262-0a47-4e1a-a5c0-66adce83e96f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/componentes/registrar/registrar.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/componentes/registrar/registrar.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/componentes/registrar/registrar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/componentes/registrar/registrar.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +21,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2PUFeEIp3WWX3hvPqG0wLIzVn3m" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -35,6 +37,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "advanced.settings",
+    "ts.external.directory.path": "C:\\Users\\user\\proyectos-elian\\20231erCuatGrupo2\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -53,5 +56,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
