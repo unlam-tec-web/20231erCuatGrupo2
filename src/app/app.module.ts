@@ -9,6 +9,7 @@ import {APP_ROUTING} from './app.routes'
 import {RouterOutlet} from "@angular/router";
 import { FooterComponent } from './componentes/comun/footer/footer.component';
 import { RegistrarComponent } from './componentes/registrar/registrar.component';
+import { DetalleCursoComponent } from './componentes/detalle-curso/detalle-curso.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { RegistrarComponent } from './componentes/registrar/registrar.component'
     HomeComponent,
     FooterComponent,
     RegistrarComponent,
+    DetalleCursoComponent,
   ],
   imports: [
     BrowserModule,
