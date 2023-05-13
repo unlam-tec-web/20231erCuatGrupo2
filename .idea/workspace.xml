@@ -8,6 +8,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/componentes/cursos/cursos.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/componentes/cursos/cursos.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/componentes/cursos/cursos.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/componentes/cursos/cursos.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/componentes/registrar/registrar.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/componentes/registrar/registrar.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/componentes/registrar/registrar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/componentes/registrar/registrar.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +41,19 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\user\\proyectos-elian\\20231erCuatGrupo2\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "advanced.settings",
+    "ts.external.directory.path": "C:\\Users\\user\\proyectos-elian\\20231erCuatGrupo2\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
 }</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
