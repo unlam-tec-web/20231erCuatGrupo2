@@ -11,6 +11,7 @@ import { FooterComponent } from './componentes/comun/footer/footer.component';
 import { RegistrarComponent } from './componentes/registrar/registrar.component';
 import { CarritoComponent } from './componentes/carrito/carrito.component';
 import { CursosComponent } from './componentes/cursos/cursos.component';
+import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component'; /*agregado*/
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { CursosComponent } from './componentes/cursos/cursos.component';
     RegistrarComponent,
     CarritoComponent,
     CursosComponent,
+    IniciarSesionComponent,/*agregado*/
   ],
   imports: [
     BrowserModule,
