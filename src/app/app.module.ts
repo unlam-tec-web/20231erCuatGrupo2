@@ -12,7 +12,7 @@ import { RegistrarComponent } from './componentes/registrar/registrar.component'
 import { CarritoComponent } from './componentes/carrito/carrito.component';
 import { CursosComponent } from './componentes/cursos/cursos.component';
 import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component'; /*agregado*/
-
+import { DetalleCursoComponent } from './componentes/detalle-curso/detalle-curso.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +24,7 @@ import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-ses
     CarritoComponent,
     CursosComponent,
     IniciarSesionComponent,
+    DetalleCursoComponent,
   ],
   imports: [
     BrowserModule,
