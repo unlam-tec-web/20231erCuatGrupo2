@@ -6,3 +6,10 @@
 .filtrar{
   margin: 20px 778px;
 }
+.card-price{
+  display: flex;
+  justify-content: space-between;
+}
+.card-title{
+
+}
