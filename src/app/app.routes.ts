@@ -4,7 +4,7 @@ import {HomeComponent} from "./componentes/home/home.component";
 import {RegistrarComponent} from "./componentes/registrar/registrar.component";
 import {CarritoComponent} from "./componentes/carrito/carrito.component";
 import {CursosComponent} from "./componentes/cursos/cursos.component";
-import { IniciarSesionComponent } from "./componentes/iniciar-sesion/iniciar-sesion.component"; /*agregado*/
+import { IniciarSesionComponent } from "./componentes/iniciar-sesion/iniciar-sesion.component";
 
 
 const APP_ROUTES: Routes = [
@@ -12,8 +12,8 @@ const APP_ROUTES: Routes = [
   { path: 'registrar', component: RegistrarComponent },
   { path: 'carrito', component: CarritoComponent },
   { path: 'cursos', component: CursosComponent},
-  { path: 'iniciar-sesion', component: IniciarSesionComponent },/*agregado*/
-  { path: '**', pathMatch: 'full', redirectTo: 'home'},/*ultimo*/
+  { path: 'iniciar-sesion', component: IniciarSesionComponent },
+  { path: '**', pathMatch: 'full', redirectTo: 'home'},
 ];
 
 export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES);

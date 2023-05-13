@@ -23,7 +23,7 @@ import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-ses
     RegistrarComponent,
     CarritoComponent,
     CursosComponent,
-    IniciarSesionComponent,/*agregado*/
+    IniciarSesionComponent,
   ],
   imports: [
     BrowserModule,
