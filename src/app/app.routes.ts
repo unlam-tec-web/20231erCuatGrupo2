@@ -12,7 +12,6 @@ const APP_ROUTES: Routes = [
   { path: 'registrar', component: RegistrarComponent },
   { path: 'carrito', component: CarritoComponent },
   { path: 'cursos', component: CursosComponent},
-  { path: '**', pathMatch: 'full', redirectTo: 'home'},
   { path: 'iniciar-sesion', component: IniciarSesionComponent },/*agregado*/
   { path: '**', pathMatch: 'full', redirectTo: 'home'},/*ultimo*/
 ];
