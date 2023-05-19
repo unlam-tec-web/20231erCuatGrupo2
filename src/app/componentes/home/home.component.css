@@ -1,0 +1,194 @@
+/* MAIN */
+.cont-index-1 {
+	height: 550px;
+	width: 100%;
+	margin: auto;
+	background: no-repeat center center;
+	background-size: cover;
+}
+
+.cont-index-1 h1 {
+	width: 70%;
+	color: white;
+	font-size: 35px;
+	font-family: "Montserrat";
+}
+
+.cont-index-1 p {
+	width: 70%;
+	padding-top: 20px;
+	color: white;
+	font-size: 25px;
+	font-family: "Montserrat";
+}
+
+.titulo-subtitulo{
+	margin-left: 150px;
+	padding-top: 120px; 
+	
+}
+
+.cont-index-2 {
+	width: 90%;
+	margin: auto;
+	margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.cont-index-2 h2 {
+	text-align: center;
+    padding: 60px 0px 40px 0px;
+    font-size: 34px;
+    font-weight: 500;
+}
+
+.cursos-mas-calificados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cursos-mas-calificados img {
+    width: 230px;
+    height: 138.88px;
+}
+
+.curso-calificado {
+	border: 2px solid #c7c7c7;
+	border-radius: 5px;
+    padding: 10.5px;
+    padding-bottom: 20px;
+}
+
+.precio-curso-cal {
+    text-align: end;
+    position: relative;
+    bottom: 40px;
+    left: 5px;
+}
+
+.precio-curso-cal p {
+    display: inline;
+    background: #fe4c13;
+    padding: 5px 10px;
+    color: white;
+}
+
+.descripcion-curso-cal {
+	width: 220px;
+}
+
+.descripcion-curso-cal p {
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+#compraCursoCalificado {
+	display: flex;
+    justify-content: flex-end;
+}
+
+.cont-index-3 {
+	width: 60%;
+	margin: auto;
+	margin-bottom: 60px;
+}
+
+.cont-index-3 h2 {
+	text-align: center;
+	padding: 60px 0px 40px 0px;
+	font-size: 34px;
+	font-weight: 500;
+}
+
+.categorias-index {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.categorias-index img {
+	width: 200px;
+}
+
+.cat-index {
+	border: 2px solid #c7c7c7;
+	border-radius: 5px;
+	padding: 10.5px;
+	padding-bottom: 20px;
+}
+
+.cat-index p {
+	color: #3c3b37;
+	padding-top: 10px;
+	text-align: center;
+}
+
+/* CONTACTO */
+.cont-contacto {
+	background-color: white;
+}
+
+.txt-contacto {
+	width: 50%;
+	margin: auto;
+	padding: 60px 0px 40px 0px;
+	font-size: 34px;
+	font-weight: 500;
+	text-align: center;
+}
+
+.formulario {
+	width: 35%;
+	margin: auto;
+	margin-bottom: 60px;
+}
+
+.nom-cor {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.nom-cor input {
+	width: 42%;
+	padding: 12px;
+	border: 2px solid #cecece;
+	border-radius: 5px;
+	color: #404040;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+.mensaje {
+	display: flex;
+}
+
+.mensaje textarea {
+	width: 100%;
+	padding: 12px;
+	border: 2px solid #cecece;
+	border-radius: 5px;
+	min-height: 100px;
+	max-height: 120px;
+	color: #404040;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+input[type="text"]:focus, textarea:focus {
+	outline: none;
+	border: 2px solid rgb(54, 129, 226);
+}
+
+.txt-btn {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+.txt-btn p {
+	color: #5e5e5e;
+	font-weight: 500;
+}

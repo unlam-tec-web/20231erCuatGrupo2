@@ -3,12 +3,15 @@
   height: 50%;
   margin: auto;
 }
-.filtrar{
-  margin: 20px 778px;
-}
 .card-price{
   display: flex;
   justify-content: space-between;
+}
+.filtro {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: end;
 }
 .card-title{
 

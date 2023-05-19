@@ -1,0 +1,48 @@
+/* FOOTER */
+.cont-foot {
+	height: 230px;
+	background-color: #3a3a3a;
+	color: white;
+}
+
+.barra-inferior {
+	width: 60%;
+	height: 70%;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.informacion {
+	padding-top: 1em;
+}
+
+.informacion a {
+	display: block;
+	color: white;
+	margin-top: 14px;
+}
+
+.integrantes {
+	font-size: 14px;
+	text-align: center;
+	padding-top: 3em;
+}
+
+.integrantes p {
+	margin-bottom: 5px;
+}
+
+#sub-integrantes {
+	padding-bottom: 15px;
+	font-size: 20px;
+}
+
+.derechos {
+	height: 30%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: lightgray;
+}
