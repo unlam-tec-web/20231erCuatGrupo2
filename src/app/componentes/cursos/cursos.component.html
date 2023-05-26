@@ -18,7 +18,7 @@
       <span class="visually-hidden">Toggle Dropdown</span>
     </button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" *ngFor="let category of categoryList" (click)="categoriasFiltradas(category.id)">{{ category.name }}</a></li>
+      <li><a class="dropdown-item" *ngFor="let categoria of categoriaLista" (click)="categoriasFiltradas(categoria.id)">{{ categoria.name }}</a></li>
     </ul>
   </div>
 </div>
@@ -27,7 +27,7 @@
 <br>
 
 <div class="contenedor">
-  <div *ngFor="let item of filteredList">
+  <div *ngFor="let item of listaFiltrada">
     <div class="card mb-3" id="{{item.id}}">
       <div class="row g-0">
         <div class="col-md-4">
