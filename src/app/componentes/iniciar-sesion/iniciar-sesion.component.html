@@ -9,12 +9,12 @@
 </head>
 <body>
 
-<form>
+<form [formGroup]="myForm" (ngSubmit)="saveData()" novalidate>
   <div class="contenedor">
     <h1>Iniciar sesión</h1>
     <label for="mail">Ingrese su correo electronico</label>
     <input type="email" id="mail" name="mail">
-  
+
     <label for="contrasenia">Escriba su contraseña</label>
     <input type="password" id="contrasenia" name="contrasenia">
 

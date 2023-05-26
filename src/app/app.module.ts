@@ -12,7 +12,9 @@ import { RegistrarComponent } from './componentes/registrar/registrar.component'
 import { CarritoComponent } from './componentes/carrito/carrito.component';
 import { CursosComponent } from './componentes/cursos/cursos.component';
 import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
-import { DetalleCursoComponent } from './componentes/detalle-curso/detalle-curso.component'; /*agregado*/
+import { DetalleCursoComponent } from './componentes/detalle-curso/detalle-curso.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms"; /*agregado*/
+
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { DetalleCursoComponent } from './componentes/detalle-curso/detalle-curso
   imports: [
     BrowserModule,
     RouterOutlet,
-    APP_ROUTING
+    APP_ROUTING,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
