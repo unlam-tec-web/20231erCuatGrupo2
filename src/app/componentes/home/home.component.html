@@ -1,1 +1,112 @@
-<p>HOLA MUNDO</p>
+<!-- PRESENTACIÓN -->
+<div class="cont-index-1" style="background-image: url('assets/img/banner.jpg');">
+    <div class="titulo-subtitulo" >
+        <h1>Amplía tus oportunidades profesionales</h1>
+        <p>Elige entre nuestros cursos con contenido nuevo cada mes</p>
+    </div>
+</div>
+
+<!-- CURSOS MAS CALIFICADOS -->
+<div class="cont-index-2">
+
+    <h2>Últimos cursos agregados</h2>
+
+    <div class="cursos-mas-calificados">
+        <div class="curso-calificado">
+            <div>
+                <img src="assets/img/cursos/curso-spring.jpg" alt="Spring framework">
+            </div>
+            <div class="precio-curso-cal">
+                <p>$ 2500.0</p>
+            </div>
+            <div class="descripcion-curso-cal">
+                <p>Spring Framework 5</p>
+            </div>
+            <form action="verMediosDePago" method="POST" id="compraCursoCalificado">
+                <input type="hidden" name="id_curso" value="2">
+                <input type="hidden" name="precio" value="2500.0">
+                <input class="btn btn-primary" type="submit" value="Comprar">
+            </form>
+        </div>
+
+        <div class="curso-calificado">
+            <div>
+                <img src="assets/img/cursos/adobe-photoshop.jpg" alt="Adobe Photoshop">
+            </div>
+            <div class="precio-curso-cal">
+                <p>$ 1000.0</p>
+            </div>
+            <div class="descripcion-curso-cal">
+                <p>Adobe Photoshop</p>
+            </div>
+            <form action="verMediosDePago" method="POST" id="compraCursoCalificado">
+                <input type="hidden" name="id_curso" value="4">
+                <input type="hidden" name="precio" value="1000.0">
+                <input class="btn btn-primary" type="submit" value="Comprar">
+            </form>
+        </div>
+        
+        <div class="curso-calificado">
+            <div>
+                <img src="assets/img/cursos/diseno-videojuegos.jpg" alt="Videojuegos">
+            </div>
+            <div class="precio-curso-cal">
+                <p>$ 3200.0</p>
+            </div>
+            <div class="descripcion-curso-cal">
+                <p>Modelado para videojuegos</p>
+            </div>
+            <form action="verMediosDePago" method="POST" id="compraCursoCalificado">
+                <input type="hidden" name="id_curso" value="6">
+                <input type="hidden" name="precio" value="3200.0">
+                <input class="btn btn-primary" type="submit" value="Comprar">
+            </form>
+        </div>
+        
+        <div class="curso-calificado">
+            <div>
+                <img src="assets/img/cursos/curso-piano.jpg" alt="Curso piano">
+            </div>
+            <div class="precio-curso-cal">
+                <p>$ 2000.0</p>
+            </div>
+            <div class="descripcion-curso-cal">
+                <p>Curso de piano completo</p>
+            </div>
+            <form action="verMediosDePago" method="POST" id="compraCursoCalificado">
+                <input type="hidden" name="id_curso" value="8">
+                <input type="hidden" name="precio" value="2000.0">
+                <input class="btn btn-primary" type="submit" value="Comprar">
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- CATEGORÍAS -->
+<div class="cont-index-3">
+
+    <h2>Categorías</h2>
+
+    <div class="categorias-index">
+        <div class="cat-index">
+            <a href="verCursosPorCategoria?categoria=diseno">
+                <img src="assets/img/cat-diseño.jpg">
+                <p>Diseño</p>
+            </a>
+        </div>
+
+        <div class="cat-index">
+            <a href="verCursosPorCategoria?categoria=programacion">
+                <img src="assets/img/cat-programacion.jpg">
+                <p>Programación</p>
+            </a>
+        </div>
+
+        <div class="cat-index">
+            <a href="verCursosPorCategoria?categoria=musica">
+                <img src="assets/img/cat-musica.jpg">
+                <p>Música</p>
+            </a>
+        </div>
+    </div>
+</div>

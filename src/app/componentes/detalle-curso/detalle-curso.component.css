@@ -1,0 +1,56 @@
+#contenedor {
+	width: 50%;
+    margin: auto;
+    padding: 0px 100px;
+    padding-right: 40px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#cont1 {
+	float: left;
+}
+
+#cont2 {
+	font-size: 20px;
+}
+
+#cont3 {
+	margin-top: 41px;
+	margin-bottom: 20px;
+}
+
+#nombreCurso {
+	margin-bottom: 0px;
+}
+
+#precioCurso {
+	font-weight: bold;
+}
+
+#tit {
+	text-align: center;
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+
+#img1 {
+	width: 340px;
+}
+
+#cont2, #cont3, #cont4 {
+	margin-left: 390px;
+}
+
+#descripcion{
+	height: 246;
+	width: 662px;
+	margin: 0 auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+#descTit{
+	font-size: 22px;
+	font-weight: bold;
+}
