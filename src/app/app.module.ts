@@ -14,6 +14,8 @@ import { CursosComponent } from './componentes/cursos/cursos.component';
 import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
 import { DetalleCursoComponent } from './componentes/detalle-curso/detalle-curso.component'; /*agregado*/
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +31,7 @@ import { DetalleCursoComponent } from './componentes/detalle-curso/detalle-curso
   imports: [
     BrowserModule,
     RouterOutlet,
+    HttpClientModule,
     APP_ROUTING
   ],
   providers: [],
