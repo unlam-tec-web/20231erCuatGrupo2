@@ -15,7 +15,7 @@ import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-ses
 import { DetalleCursoComponent } from './componentes/detalle-curso/detalle-curso.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms"; /*agregado*/
 
-
+import{HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +33,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms"; /*agregado*/
     RouterOutlet,
     APP_ROUTING,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

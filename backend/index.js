@@ -6,6 +6,9 @@ const port = (process.env.port || 3000);
 //express
 const app = express();
 
+//admitir los tipos de datos
+app.use(express.json())
+
 //config
 app.set('port',port)
 
