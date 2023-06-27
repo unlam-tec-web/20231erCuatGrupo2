@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {CursoService} from '../../SERVICES/curso.service'
+import {CursoService, Curso} from '../../SERVICES/curso.service'
 
 @Component({
   selector: 'app-cursos',
@@ -8,6 +8,16 @@ import {CursoService} from '../../SERVICES/curso.service'
 })
 export class CursosComponent implements OnInit {
 
+  private listarCurso: Curso[] =[];
+
+  categoriaLista: any[] = [
+    { id: 0, name: 'Todos los cursos' },
+    { id: 1, name: 'programacion' },
+    { id: 2, name: 'diseno' },
+    { id: 3, name: 'musica' }
+  ];
+
+  listaFiltrada: Curso[] = [];
 
   constructor(private CursoService:CursoService) {}
 
@@ -20,11 +30,35 @@ export class CursosComponent implements OnInit {
     this.CursoService.getCursos().subscribe(
       res=>{
         console.log(res)
+        this.listarCurso=<any>res;
+        this.listaFiltrada = [...this.listarCurso];
       },
       err=>console.log(err)
     )
   }
-
+/*
+  categoriasFiltradas(categoriaId: number): void {
+    if (categoriaId === 0) {
+      this.listaFiltrada = [...this.listarCurso]; // Mostrar todos los cursos
+    } else {
+      this.listaFiltrada = this.listarCurso.filter(item =>
+        item.Categoria === this.categoriaLista.find(c => c.id === categoriaId).name
+      );
+    }
+  }
+ */
+  categoriasFiltradas(categoriaId: number): void {
+    if (categoriaId === 0) {
+      this.listaFiltrada = [...this.listarCurso]; // Mostrar todos los cursos
+    } else {
+      const categoriaSeleccionada = this.categoriaLista.find(c => c.id === categoriaId);
+      if (categoriaSeleccionada) {
+        this.listaFiltrada = this.listarCurso.filter(item =>
+          item.Categoria === categoriaSeleccionada.name
+        );
+      }
+    }
+  }
 
 
 

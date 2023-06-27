@@ -1,3 +1,5 @@
+
+
 <!--
 <!doctype html>
 <html lang="es">
@@ -8,9 +10,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Cursos</title>
 </head>
+<body> -->
 <body>
-
-<!-- Example split danger button
 <div class="filtro">
   <div class="btn-group filtrar my-4">
     <button type="button" class="btn btn-danger">Filtrar</button>
@@ -23,6 +24,48 @@
   </div>
 </div>
 
+<br>
+<br>
+
+<div class="contenedor">
+  <div *ngFor="let item of listaFiltrada">
+    <div class="card mb-3" [id]="item.Identificador">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img [src]="'assets/img/cursos/' + item.Imagen" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <div class="card-price">
+              <h5 class="card-title">{{ item.Nombre }}</h5>
+              <p>{{ item.Precio | currency }}</p>
+            </div>
+            <p class="card-text">{{ item.Descripcion }}</p>
+            <button type="button" class="btn btn-primary">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+
+<!-- ACA CREAR EL FILTRO ----- >
+<div class="filtro">
+  <div class="btn-group filtrar my-4">
+    <button type="button" class="btn btn-danger">Filtrar</button>
+    <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+      <span class="visually-hidden">Toggle Dropdown</span>
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" *ngFor="let categoria of categoriaLista" (click)="categoriasFiltradas(categoria.id)">{{ categoria.name }}</a></li>
+    </ul>
+  </div>
+</div>
+-->
+
+<!--
 <br>
 <br>
 
