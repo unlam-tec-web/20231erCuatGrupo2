@@ -16,6 +16,8 @@ import { DetalleCursoComponent } from './componentes/detalle-curso/detalle-curso
 import {FormsModule, ReactiveFormsModule} from "@angular/forms"; /*agregado*/
 
 import{HttpClientModule} from '@angular/common/http';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,7 @@ import{HttpClientModule} from '@angular/common/http';
     APP_ROUTING,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
