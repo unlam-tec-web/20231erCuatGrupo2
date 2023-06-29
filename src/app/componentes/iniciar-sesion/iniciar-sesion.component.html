@@ -1,4 +1,4 @@
-<!doctype html>
+<!--<!doctype html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -24,4 +24,33 @@
   </div>
 </form>
 </body>
+</html>-->
+
+<!doctype html>
+<html lang="es">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Iniciar Sesion</title>
+    </head>
+
+  <body>
+    <form>
+      <div class="contenedor">
+        <h1>Iniciar sesión</h1>
+        <label for="mail">Ingrese su mail</label>
+        <input type="email" id="mail" name="mail" [(ngModel)]="user.email">
+
+        <label for="contrasenia">Ingrese su contraseña</label>
+        <input type="password" id="contrasenia" name="contrasenia" [(ngModel)]="user.password">
+
+        <div class="row">
+          <button (click)="signIn()" class="btn btn-primary">Iniciar Sesión</button>
+        </div>
+        <a href=>Recuperar contraseña</a>
+      </div>
+    </form>
+  </body>
 </html>

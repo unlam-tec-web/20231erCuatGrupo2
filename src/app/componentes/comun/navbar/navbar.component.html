@@ -25,22 +25,25 @@
       </div>
       <ul class="navbar-nav ms-auto ">
         <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" [routerLink]="['home']">Home</a>
+          <a class="nav-link" *ngIf="!isAuthenticated()" [routerLink]="['home']">Home</a>
         </li>
         <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" [routerLink]="['registrar']">Registrar</a>
+          <a class="nav-link" *ngIf="!isAuthenticated()" [routerLink]="['registrar']">Registrar</a>
         </li>
         <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" [routerLink]="['iniciar-sesion']">Iniciar Sesion</a>
+          <a class="nav-link" *ngIf="!isAuthenticated()" [routerLink]="['iniciar-sesion']">Iniciar Sesion</a>
         </li>
         <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" [routerLink]="['cursos']">Cursos</a>
+          <a class="nav-link" *ngIf="isAuthenticated()" [routerLink]="['cursos']">Cursos</a>
         </li>
         <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" [routerLink]="['carrito']">Carrito</a>
+          <a class="nav-link" *ngIf="isAuthenticated()" [routerLink]="['carrito']">Carrito</a>
         </li>
         <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" [routerLink]="['detalle-curso']">Detalle curso</a>
+          <a class="nav-link" *ngIf="isAuthenticated()" [routerLink]="['detalle-curso']">Detalle curso</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" *ngIf="isAuthenticated()" routerLink="/cerrar-sesion">Salir</a>
         </li>
       </ul>
     </div>

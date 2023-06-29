@@ -12,6 +12,7 @@ import { RegistrarComponent } from './componentes/registrar/registrar.component'
 import { CarritoComponent } from './componentes/carrito/carrito.component';
 import { CursosComponent } from './componentes/cursos/cursos.component';
 import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
+import { CerrarSesionComponent } from "./componentes/cerrar-sesion/cerrar-sesion.component";
 import { DetalleCursoComponent } from './componentes/detalle-curso/detalle-curso.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms"; /*agregado*/
 
@@ -28,6 +29,7 @@ import{HttpClientModule} from '@angular/common/http';
     CarritoComponent,
     CursosComponent,
     IniciarSesionComponent,
+    CerrarSesionComponent,
     DetalleCursoComponent
   ],
   imports: [
