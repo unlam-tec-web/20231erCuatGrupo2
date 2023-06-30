@@ -19,7 +19,7 @@ const APP_ROUTES: Routes = [
   { path: 'cursos', component: CursosComponent, canActivate: [RouteGuardService]},
   { path: 'iniciar-sesion', component: IniciarSesionComponent },
   { path: 'cerrar-sesion', component: CerrarSesionComponent, canActivate: [RouteGuardService] },
-  { path: 'detalle-curso', component: DetalleCursoComponent, canActivate: [RouteGuardService] },
+  { path: 'detalle-curso/:id', component: DetalleCursoComponent, canActivate: [RouteGuardService] },
   { path: 'codigo-validacion', component: CodigoValidacionComponent },
   { path: 'ingresar-email', component: IngresarEmailComponent },
   { path: 'recuperar-contrasenia', component: RecuperarContraseniaComponent },

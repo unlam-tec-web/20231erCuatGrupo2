@@ -17,7 +17,7 @@ export class CursoService {
   }
 
   //get un curso
-  getUnCurso(id:number){
+  getUnCurso(id:string){
     return this.http.get(this.url+'/'+id);
   }
 
