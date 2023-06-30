@@ -67,8 +67,22 @@ router.put('/:id',(req,res)=>{
       res.json({status:'curso modificado'})
     }
   })
+
 })
-//---------------------------------
+
+//GET CATEGORIAS
+router.get('/',(req, res)=>{
+  let sql='select categoria from cursos'
+  conexion.query(sql,(err,rows,fields)=>{
+    if(err) throw err;
+    else{
+      res.json(rows)
+    }
+  })
+
+})
+
+
 
 
 
