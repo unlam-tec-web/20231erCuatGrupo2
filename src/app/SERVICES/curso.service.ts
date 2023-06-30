@@ -47,6 +47,10 @@ export class CursoService {
     return this.http.get(this.url);
   }
 
+  //agregar curso al carrito
+  agregarCursoCarrito(Identificador:Curso){
+    return this.http.post(this.url, Identificador);
+  }
 }
 
 

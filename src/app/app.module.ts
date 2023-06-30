@@ -19,8 +19,6 @@ import{HttpClientModule} from '@angular/common/http';
 import { ComprarComponent } from './componentes/comprar/comprar.component';
 
 
-import { HttpClientModule } from '@angular/common/http';
-
 @NgModule({
   declarations: [
     AppComponent,
