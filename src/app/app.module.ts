@@ -12,7 +12,12 @@ import { RegistrarComponent } from './componentes/registrar/registrar.component'
 import { CarritoComponent } from './componentes/carrito/carrito.component';
 import { CursosComponent } from './componentes/cursos/cursos.component';
 import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
-import { DetalleCursoComponent } from './componentes/detalle-curso/detalle-curso.component'; /*agregado*/
+import { DetalleCursoComponent } from './componentes/detalle-curso/detalle-curso.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms"; /*agregado*/
+
+import{HttpClientModule} from '@angular/common/http';
+import { ComprarComponent } from './componentes/comprar/comprar.component';
+
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -26,13 +31,16 @@ import { HttpClientModule } from '@angular/common/http';
     CarritoComponent,
     CursosComponent,
     IniciarSesionComponent,
-    DetalleCursoComponent
+    DetalleCursoComponent,
+    ComprarComponent
   ],
   imports: [
     BrowserModule,
     RouterOutlet,
     HttpClientModule,
-    APP_ROUTING
+    APP_ROUTING,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,14 @@
+.contenedor{
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  padding-top: 20px;
+}
+
+.card-price{
+  display: flex;
+  justify-content: space-between;
+}
+.card-title{
+
+}
