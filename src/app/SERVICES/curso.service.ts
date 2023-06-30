@@ -17,7 +17,7 @@ export class CursoService {
   }
 
   //get un curso
-  getUnCurso(id:number){
+  getUnCurso(id:string){
     return this.http.get(this.url+'/'+id);
   }
 
@@ -37,7 +37,19 @@ export class CursoService {
     return this.http.put(this.url+'/'+id, curso);
   }
 
+  //obtener los ultimos 4 cursos
+  getUltimos4Cursos(){
+    return this.http.get(this.url);
+  }
+
+  //get Categorias
+  getCategorias(){
+    return this.http.get(this.url);
+  }
+
 }
+
+
 
 export interface Curso{
   Identificador?:number;

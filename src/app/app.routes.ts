@@ -13,7 +13,7 @@ const APP_ROUTES: Routes = [
   { path: 'carrito', component: CarritoComponent },
   { path: 'cursos', component: CursosComponent},
   { path: 'iniciar-sesion', component: IniciarSesionComponent },
-  { path: 'detalle-curso', component: DetalleCursoComponent },
+  { path: 'detalle-curso/:id', component: DetalleCursoComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'home'},
 ];
 
