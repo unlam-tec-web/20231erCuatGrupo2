@@ -18,8 +18,16 @@ export class IniciarSesionComponent {
   public signIn(): void {
     this.cognitoService.signIn(this.user).then(() => {
       this.router.navigate(['/home']);
-    }).catch(() => {
-      console.log("Algo ocurrió mal al iniciar sesión")
+    }).catch((error) => {
+      switch(error.code){
+        case 'UsuarioNoConfirmadoException':
+          this.router.navigate(['/codigo-validacion'], { queryParams: {'email': this.user.email} });
+          break;
+        case 'NoAutorizadoException':
+          console.log("Usuario no autorizado")
+          break;
+
+      }
     })
   }
 

@@ -17,6 +17,9 @@ import { DetalleCursoComponent } from './componentes/detalle-curso/detalle-curso
 import {FormsModule, ReactiveFormsModule} from "@angular/forms"; /*agregado*/
 
 import{HttpClientModule} from '@angular/common/http';
+import { CodigoValidacionComponent } from './componentes/codigo-validacion/codigo-validacion.component';
+import { RecuperarContraseniaComponent } from './componentes/recuperar-contrasenia/recuperar-contrasenia.component';
+import { IngresarEmailComponent } from './componentes/ingresar-email/ingresar-email.component';
 
 
 @NgModule({
@@ -30,7 +33,10 @@ import{HttpClientModule} from '@angular/common/http';
     CursosComponent,
     IniciarSesionComponent,
     CerrarSesionComponent,
-    DetalleCursoComponent
+    DetalleCursoComponent,
+    CodigoValidacionComponent,
+    RecuperarContraseniaComponent,
+    IngresarEmailComponent
   ],
   imports: [
     BrowserModule,

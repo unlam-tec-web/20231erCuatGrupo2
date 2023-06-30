@@ -26,7 +26,7 @@ export class RegistrarComponent {
   }
   public confirmSignUp(): void {
     this.cognitoService.confirmSignUp(this.user).then(() => {
-      this.router.navigate(['/login'])
+      this.router.navigate(['/iniciar-sesion'])
     }).catch(() => {
       console.log("Ocurrió algun error al confirmar el registro");
     })

@@ -29,8 +29,20 @@ export class CognitoService {
     });
   }
 
+  public forgotPassword(user: IUser): Promise<any> {
+    return Auth.forgotPassword(user.email);
+  }
+
+  public forgotPasswordSubmit(user: IUser): Promise<any> {
+    return Auth.forgotPasswordSubmit(user.email, user.code, user.password);
+  }
+
   public confirmSignUp(user: IUser): Promise<any> {
     return Auth.confirmSignUp(user.email, user.code);
+  }
+
+  public resendSignUp(user: IUser): Promise<any> {
+    return Auth.resendSignUp(user.email);
   }
 
   public signIn(user: IUser): Promise<any> {

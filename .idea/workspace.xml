@@ -3,12 +3,25 @@
   <component name="ChangeListManager">
     <list default="true" id="ef834316-2c9e-4bf0-954e-8bbd2dd8ed47" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/componentes/cerrar-sesion/cerrar-sesion.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/componentes/cerrar-sesion/cerrar-sesion.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/SERVICES/cognito.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/SERVICES/cognito.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/componentes/iniciar-sesion/iniciar-sesion.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/componentes/iniciar-sesion/iniciar-sesion.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/componentes/iniciar-sesion/iniciar-sesion.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/componentes/iniciar-sesion/iniciar-sesion.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/componentes/iniciar-sesion/iniciar-sesion.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/componentes/iniciar-sesion/iniciar-sesion.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/componentes/registrar/registrar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/componentes/registrar/registrar.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,7 +59,8 @@
       <updated>1688011295029</updated>
       <workItem from="1688011409399" duration="664000" />
       <workItem from="1688017860018" duration="12537000" />
-      <workItem from="1688059483058" duration="948000" />
+      <workItem from="1688059483058" duration="1544000" />
+      <workItem from="1688094855657" duration="9708000" />
     </task>
     <servers />
   </component>
