@@ -16,6 +16,7 @@ import { DetalleCursoComponent } from './componentes/detalle-curso/detalle-curso
 import {FormsModule, ReactiveFormsModule} from "@angular/forms"; /*agregado*/
 
 import{HttpClientModule} from '@angular/common/http';
+import { ComprarComponent } from './componentes/comprar/comprar.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import{HttpClientModule} from '@angular/common/http';
     CarritoComponent,
     CursosComponent,
     IniciarSesionComponent,
-    DetalleCursoComponent
+    DetalleCursoComponent,
+    ComprarComponent
   ],
   imports: [
     BrowserModule,

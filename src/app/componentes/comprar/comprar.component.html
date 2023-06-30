@@ -1,0 +1,12 @@
+<div>
+  <h2>Detalle de la compra</h2>
+  <ul>
+    <li *ngFor="let curso of cursos">
+      {{ curso.nombre }} - {{ curso.precio | currency }}
+    </li>
+  </ul>
+  <p>Total: {{ calcularTotal() | currency }}</p>
+  <button (click)="aceptarCompra()" class="btn btn-primary">Aceptar compra</button>
+  <button (click)="rechazarCompra()" class="btn btn-secondary">Rechazar compra</button>
+</div>
+
