@@ -9,8 +9,6 @@
 <!-- CURSOS MAS CALIFICADOS -->
 <div class="cont-index-2">
 
-    <h2>Últimos cursos agregados</h2>
-
   <div class="cont-index-2">
     <h2>Últimos cursos agregados</h2>
     <div class="cursos-mas-calificados">
@@ -19,7 +17,7 @@
           <img [src]="'assets/img/cursos/' + curso.Imagen" class="img-fluid rounded-start" alt="...">
         </div>
         <div class="precio-curso-cal">
-          <p>{{ curso.Precio }}</p>
+          <p>{{ curso.Precio }}$</p>
         </div>
         <div class="descripcion-curso-cal">
           <p>{{ curso.Nombre }}</p>
@@ -27,6 +25,7 @@
         <form action="verMediosDePago" method="POST" id="compraCursoCalificado">
           <input type="hidden" name="id_curso" [value]="curso.Identificador">
           <input type="hidden" name="precio" [value]="curso.Precio">
+          <a [routerLink]="['/detalle-curso', curso.Identificador]" class="btn btn-secondary">Ver detalle</a>&nbsp;&nbsp;
           <input class="btn btn-primary" type="submit" value="Comprar">
         </form>
       </div>
@@ -44,21 +43,21 @@
 
     <div class="categorias-index">
         <div class="cat-index">
-            <a href="verCursosPorCategoria?categoria=diseno">
+            <a href="verCursosPorCategoria?categoria=diseno" style="text-decoration: none;">
                 <img src="assets/img/cat-diseño.jpg">
                 <p>Diseño</p>
             </a>
         </div>
 
         <div class="cat-index">
-            <a href="verCursosPorCategoria?categoria=programacion">
+            <a href="verCursosPorCategoria?categoria=programacion" style="text-decoration: none;">
                 <img src="assets/img/cat-programacion.jpg">
                 <p>Programación</p>
             </a>
         </div>
 
         <div class="cat-index">
-            <a href="verCursosPorCategoria?categoria=musica">
+            <a href="verCursosPorCategoria?categoria=musica" style="text-decoration: none;">
                 <img src="assets/img/cat-musica.jpg">
                 <p>Música</p>
             </a>
