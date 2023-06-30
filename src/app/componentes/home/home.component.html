@@ -11,76 +11,31 @@
 
     <h2>Últimos cursos agregados</h2>
 
+  <div class="cont-index-2">
+    <h2>Últimos cursos agregados</h2>
     <div class="cursos-mas-calificados">
-        <div class="curso-calificado">
-            <div>
-                <img src="assets/img/cursos/curso-spring.jpg" alt="Spring framework">
-            </div>
-            <div class="precio-curso-cal">
-                <p>$ 2500.0</p>
-            </div>
-            <div class="descripcion-curso-cal">
-                <p>Spring Framework 5</p>
-            </div>
-            <form action="verMediosDePago" method="POST" id="compraCursoCalificado">
-                <input type="hidden" name="id_curso" value="2">
-                <input type="hidden" name="precio" value="2500.0">
-                <input class="btn btn-primary" type="submit" value="Comprar">
-            </form>
+      <div class="curso-calificado" *ngFor="let curso of ultimosCuatro">
+        <div>
+          <img [src]="'assets/img/cursos/' + curso.Imagen" class="img-fluid rounded-start" alt="...">
         </div>
-
-        <div class="curso-calificado">
-            <div>
-                <img src="assets/img/cursos/adobe-photoshop.jpg" alt="Adobe Photoshop">
-            </div>
-            <div class="precio-curso-cal">
-                <p>$ 1000.0</p>
-            </div>
-            <div class="descripcion-curso-cal">
-                <p>Adobe Photoshop</p>
-            </div>
-            <form action="verMediosDePago" method="POST" id="compraCursoCalificado">
-                <input type="hidden" name="id_curso" value="4">
-                <input type="hidden" name="precio" value="1000.0">
-                <input class="btn btn-primary" type="submit" value="Comprar">
-            </form>
+        <div class="precio-curso-cal">
+          <p>{{ curso.Precio }}</p>
         </div>
-        
-        <div class="curso-calificado">
-            <div>
-                <img src="assets/img/cursos/diseno-videojuegos.jpg" alt="Videojuegos">
-            </div>
-            <div class="precio-curso-cal">
-                <p>$ 3200.0</p>
-            </div>
-            <div class="descripcion-curso-cal">
-                <p>Modelado para videojuegos</p>
-            </div>
-            <form action="verMediosDePago" method="POST" id="compraCursoCalificado">
-                <input type="hidden" name="id_curso" value="6">
-                <input type="hidden" name="precio" value="3200.0">
-                <input class="btn btn-primary" type="submit" value="Comprar">
-            </form>
+        <div class="descripcion-curso-cal">
+          <p>{{ curso.Nombre }}</p>
         </div>
-        
-        <div class="curso-calificado">
-            <div>
-                <img src="assets/img/cursos/curso-piano.jpg" alt="Curso piano">
-            </div>
-            <div class="precio-curso-cal">
-                <p>$ 2000.0</p>
-            </div>
-            <div class="descripcion-curso-cal">
-                <p>Curso de piano completo</p>
-            </div>
-            <form action="verMediosDePago" method="POST" id="compraCursoCalificado">
-                <input type="hidden" name="id_curso" value="8">
-                <input type="hidden" name="precio" value="2000.0">
-                <input class="btn btn-primary" type="submit" value="Comprar">
-            </form>
-        </div>
+        <form action="verMediosDePago" method="POST" id="compraCursoCalificado">
+          <input type="hidden" name="id_curso" [value]="curso.Identificador">
+          <input type="hidden" name="precio" [value]="curso.Precio">
+          <input class="btn btn-primary" type="submit" value="Comprar">
+        </form>
+      </div>
     </div>
+  </div>
+
 </div>
+
+
 
 <!-- CATEGORÍAS -->
 <div class="cont-index-3">
