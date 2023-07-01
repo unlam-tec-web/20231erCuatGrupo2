@@ -18,12 +18,6 @@ export class IniciarSesionComponent {
 
   public signIn(): void {
     this.cognitoService.signIn(this.user).then(() => {
-      Auth.currentUserPoolUser().then((session) => {
-        this.cognitoService.isAuthenticated();
-        console.log(session);
-      }).catch((error) => {
-        console.log(error);
-      });
       this.router.navigate(['/home']);
     }).catch((error) => {
       switch(error.code){

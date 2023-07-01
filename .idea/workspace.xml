@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ef834316-2c9e-4bf0-954e-8bbd2dd8ed47" name="Changes" comment="">
+    <list default="true" id="30a932ea-5167-4fe9-94ff-dd03ccb1daf1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/environments/environment.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/SERVICES/cognito.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/SERVICES/cognito.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/SERVICES/route-guard.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/SERVICES/route-guard.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/componentes/codigo-validacion/codigo-validacion.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/componentes/codigo-validacion/codigo-validacion.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/componentes/iniciar-sesion/iniciar-sesion.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/componentes/iniciar-sesion/iniciar-sesion.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/componentes/recuperar-contrasenia/recuperar-contrasenia.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/componentes/recuperar-contrasenia/recuperar-contrasenia.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +47,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ef834316-2c9e-4bf0-954e-8bbd2dd8ed47" name="Changes" comment="" />
+      <changelist id="30a932ea-5167-4fe9-94ff-dd03ccb1daf1" name="Changes" comment="" />
       <created>1688011295029</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -62,6 +57,8 @@
       <workItem from="1688059483058" duration="1544000" />
       <workItem from="1688094855657" duration="14864000" />
       <workItem from="1688147271324" duration="18822000" />
+      <workItem from="1688225810434" duration="646000" />
+      <workItem from="1688227465498" duration="704000" />
     </task>
     <servers />
   </component>
