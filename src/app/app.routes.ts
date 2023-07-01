@@ -13,12 +13,14 @@ import {IngresarEmailComponent} from "./componentes/ingresar-email/ingresar-emai
 import {RecuperarContraseniaComponent} from "./componentes/recuperar-contrasenia/recuperar-contrasenia.component";
 import {ComprarComponent} from "./componentes/comprar/comprar.component";
 
+
 const APP_ROUTES: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'registrar', component: RegistrarComponent },
   { path: 'carrito', component: CarritoComponent, canActivate: [RouteGuardService] },
   { path: 'cursos', component: CursosComponent, canActivate: [RouteGuardService]},
   { path: 'iniciar-sesion', component: IniciarSesionComponent },
+  { path: 'comprar', component: ComprarComponent },
   { path: 'cerrar-sesion', component: CerrarSesionComponent, canActivate: [RouteGuardService] },
   { path: 'detalle-curso/:id', component: DetalleCursoComponent, canActivate: [RouteGuardService] },
   { path: 'codigo-validacion', component: CodigoValidacionComponent },
