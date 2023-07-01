@@ -15,11 +15,11 @@ export class AppComponent {
   }
   ngOnInit() {
 
-    this.http.get<any>('http://localhost:3000/api/hola').subscribe(data => {
+ //   this.http.get<any>('http://localhost:3000/api').subscribe(data => {
 
-      this.message = data;
+   //   this.message = data;
 
-    });
+    //});
 
   }
 
