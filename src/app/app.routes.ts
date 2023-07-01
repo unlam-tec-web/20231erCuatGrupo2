@@ -5,15 +5,24 @@ import {RegistrarComponent} from "./componentes/registrar/registrar.component";
 import {CarritoComponent} from "./componentes/carrito/carrito.component";
 import {CursosComponent} from "./componentes/cursos/cursos.component";
 import { IniciarSesionComponent } from "./componentes/iniciar-sesion/iniciar-sesion.component";
+import {CerrarSesionComponent} from "./componentes/cerrar-sesion/cerrar-sesion.component";
 import {DetalleCursoComponent} from "./componentes/detalle-curso/detalle-curso.component";
+import {RouteGuardService} from "./SERVICES/route-guard.service";
+import {CodigoValidacionComponent} from "./componentes/codigo-validacion/codigo-validacion.component";
+import {IngresarEmailComponent} from "./componentes/ingresar-email/ingresar-email.component";
+import {RecuperarContraseniaComponent} from "./componentes/recuperar-contrasenia/recuperar-contrasenia.component";
 
 const APP_ROUTES: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'registrar', component: RegistrarComponent },
-  { path: 'carrito', component: CarritoComponent },
-  { path: 'cursos', component: CursosComponent},
+  { path: 'carrito', component: CarritoComponent, canActivate: [RouteGuardService] },
+  { path: 'cursos', component: CursosComponent, canActivate: [RouteGuardService]},
   { path: 'iniciar-sesion', component: IniciarSesionComponent },
-  { path: 'detalle-curso/:id', component: DetalleCursoComponent },
+  { path: 'cerrar-sesion', component: CerrarSesionComponent, canActivate: [RouteGuardService] },
+  { path: 'detalle-curso/:id', component: DetalleCursoComponent, canActivate: [RouteGuardService] },
+  { path: 'codigo-validacion', component: CodigoValidacionComponent },
+  { path: 'ingresar-email', component: IngresarEmailComponent },
+  { path: 'recuperar-contrasenia', component: RecuperarContraseniaComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'home'},
 ];
 
