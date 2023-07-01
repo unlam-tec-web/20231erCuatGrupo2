@@ -67,13 +67,12 @@ export class CognitoService {
   }
 
   public isAuthenticated(): boolean {
-    Auth.currentUserPoolUser({bypassCache: true})
     return this.authenticationSubject.value
   }
 
-  public updateUser(user: IUser): void {
+  /*public updateUser(user: IUser): void {
     const userActual = Auth.currentAuthenticatedUser();
-  }
+  }*/
 
 }
 
