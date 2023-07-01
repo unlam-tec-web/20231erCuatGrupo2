@@ -42,31 +42,6 @@ router.post('/',(req,res)=>{
   })
 })
 
-//Agregar curso al carrito
-router.post('/',(req,res)=>{
-  const{Identificador} = req.body
-
-  let sql =`insert into carrito(Identificador) values('${Identificador}')`
-  conexion.query(sql,(err,rows,fields)=>{
-    if(err) throw err
-    else{
-      res.json({status:'curso agregado al carrito'})
-    }
-  })
-})
-
-//MOSTRAR LO QUE COTIENE EL CARRITO (GET CARRITO)
-router.get('/',(req, res)=>{
-  let sql='select * from carrito'
-  conexion.query(sql,(err,rows,fields)=>{
-    if(err) throw err;
-    else{
-      res.json(rows)
-    }
-  })
-
-})
-
 //Eliminar curso
 router.delete('/:id',(req,res)=>{
   const{id}=req.params
