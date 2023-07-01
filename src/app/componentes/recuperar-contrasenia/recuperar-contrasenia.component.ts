@@ -16,7 +16,8 @@ export class RecuperarContraseniaComponent {
   }
 
   public ngOnInit(): void {
-    this.activatedRoute.queryParams.subscribe(params => {
+    this.activatedRoute.queryParams.subscribe(params => { //parámetros de consulta con queryParams y
+      // acceso a los parámetros de URL
       let email = params['email'];
       this.user.email = email;
       this.cognitoService.forgotPassword(this.user).then(() => {
