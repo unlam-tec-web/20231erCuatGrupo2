@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {Router} from "@angular/router";
+import {CognitoService} from "../../../SERVICES/cognito.service";
 
 @Component({
   selector: 'app-navbar',
@@ -7,5 +8,9 @@ import {Router} from "@angular/router";
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  constructor( private router:Router ) { }
+  constructor( private router:Router, private cognitoService: CognitoService ) { }
+
+  public isAuthenticated(): boolean {
+    return this.cognitoService.isAuthenticated();
+  }
 }
