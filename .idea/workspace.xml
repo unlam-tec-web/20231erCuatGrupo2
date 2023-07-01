@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="ef834316-2c9e-4bf0-954e-8bbd2dd8ed47" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/componentes/comun/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/componentes/comun/navbar/navbar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/SERVICES/cognito.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/SERVICES/cognito.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/SERVICES/route-guard.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/SERVICES/route-guard.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/componentes/codigo-validacion/codigo-validacion.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/componentes/codigo-validacion/codigo-validacion.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/componentes/iniciar-sesion/iniciar-sesion.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/componentes/iniciar-sesion/iniciar-sesion.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/componentes/recuperar-contrasenia/recuperar-contrasenia.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/componentes/recuperar-contrasenia/recuperar-contrasenia.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +60,8 @@
       <workItem from="1688011409399" duration="664000" />
       <workItem from="1688017860018" duration="12537000" />
       <workItem from="1688059483058" duration="1544000" />
-      <workItem from="1688094855657" duration="11321000" />
+      <workItem from="1688094855657" duration="14864000" />
+      <workItem from="1688147271324" duration="18822000" />
     </task>
     <servers />
   </component>
