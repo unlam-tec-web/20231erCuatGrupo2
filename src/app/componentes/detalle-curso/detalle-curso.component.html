@@ -18,7 +18,7 @@
 				<p id="precioCurso">{{c.Precio}}$</p>
 			</div>
 			<div id="cont3">
-				<input class="w-100 btn btn-secondary" type="submit" value="Añadir al carrito">
+        <a [routerLink]="['/carrito', { id: c.Identificador }]" class="btn btn-secondary">Añadir al carrito</a>&nbsp;
 			</div>
 			<div id="cont4">
 				<input class="w-100 btn btn-primary" type="submit" value="Comprar">

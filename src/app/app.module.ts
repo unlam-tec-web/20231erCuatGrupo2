@@ -20,6 +20,7 @@ import{HttpClientModule} from '@angular/common/http';
 import { CodigoValidacionComponent } from './componentes/codigo-validacion/codigo-validacion.component';
 import { RecuperarContraseniaComponent } from './componentes/recuperar-contrasenia/recuperar-contrasenia.component';
 import { IngresarEmailComponent } from './componentes/ingresar-email/ingresar-email.component';
+import { ComprarComponent } from './componentes/comprar/comprar.component';
 
 
 @NgModule({
@@ -36,15 +37,16 @@ import { IngresarEmailComponent } from './componentes/ingresar-email/ingresar-em
     DetalleCursoComponent,
     CodigoValidacionComponent,
     RecuperarContraseniaComponent,
-    IngresarEmailComponent
+    IngresarEmailComponent,
+    ComprarComponent
   ],
   imports: [
     BrowserModule,
     RouterOutlet,
+    HttpClientModule,
     APP_ROUTING,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
