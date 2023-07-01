@@ -7,6 +7,26 @@
 </head>
 <body>
 
+<div *ngFor="let c of cursoDentroDelCarrito">
+  <div class="card mb-3" style="max-width: 840px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <div>
+         <!-- <img [src]="'assets/img/cursos/' + c.Imagen" alt="">-->
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{c.Nombre}}</h5>
+          <p class="card-text">{{c.Descripcion}}</p>
+          <p class="card-text"><small class="text-body-secondary">PRECIO {{c.Precio}}$</small></p>
+          <button type="button" class="btn-close" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--
    <div class="contenedor">
     <div class="card mb-3" style="max-width: 840px;">
       <div class="row g-0">
@@ -50,11 +70,11 @@
         <h5 class="card-title">Total</h5>
         <p class="card-text">20$</p>
 
-        <!--<input class="btn btn-primary" type="submit"  value="Comprar"> -->
+        <input class="btn btn-primary" type="submit"  value="Comprar">
         <a [routerLink]="['/comprar']" class="btn btn-secondary">Comprar</a>&nbsp;&nbsp;
       </div>
     </div>
 
-   </div>
+   </div>-->
 </body>
 </html>
