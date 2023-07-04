@@ -18,4 +18,16 @@
       </div>
     </div>
   </div>
+  <div class="text-center">
+    <p class="fw-bold">Total: {{ sumaTotal }}$</p>
+    <button class="btn btn-danger" (click)="vaciarCarrito()">Vaciar Carrito</button>
+  </div>
+</div>
+
+<div class="mensaje-agregar" *ngIf="mostrarMensajeAgregar">
+  <div class="card bg-success text-white">
+    <div class="card-body">
+      {{ mensajeAgregar }}
+    </div>
+  </div>
 </div>

@@ -23,6 +23,10 @@ import { RecuperarContraseniaComponent } from './componentes/recuperar-contrasen
 import { IngresarEmailComponent } from './componentes/ingresar-email/ingresar-email.component';
 import { ComprarComponent } from './componentes/comprar/comprar.component';
 
+//animaciones
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
 
 
 @NgModule({
@@ -49,6 +53,8 @@ import { ComprarComponent } from './componentes/comprar/comprar.component';
     APP_ROUTING,
     FormsModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

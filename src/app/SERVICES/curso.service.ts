@@ -62,5 +62,6 @@ export interface Curso{
   Imagen?:string;
   Nombre?:string;
   Precio?:number;
+  Cantidad?:number;
 
 }

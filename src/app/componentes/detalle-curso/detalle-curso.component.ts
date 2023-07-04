@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import {CursoService, Curso} from '../../SERVICES/curso.service'
 import {CarritoService} from "../../SERVICES/carrito.service";
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-detalle-curso',
@@ -16,7 +17,8 @@ export class DetalleCursoComponent implements OnInit {
     private cursoService: CursoService,
     private carritoService: CarritoService,
     private router: Router,
-    private aRouter: ActivatedRoute
+    private aRouter: ActivatedRoute,
+    private toastr: ToastrService
   ) {
     this.id = this.aRouter.snapshot.paramMap.get('id');
   }
@@ -38,6 +40,7 @@ export class DetalleCursoComponent implements OnInit {
 
   agregarAlCarrito(curso: Curso) {
     this.carritoService.agregarAlCarrito(curso);
+    this.toastr.success('El curso se ha añadido al carrito.', '¡Éxito!');
     this.router.navigate(['/carrito']);
   }
 }
