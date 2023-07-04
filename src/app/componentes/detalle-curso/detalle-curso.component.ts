@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import {CursoService, Curso} from '../../SERVICES/curso.service'
+import {CarritoService} from "../../SERVICES/carrito.service";
 
 @Component({
   selector: 'app-detalle-curso',
@@ -8,27 +9,35 @@ import {CursoService, Curso} from '../../SERVICES/curso.service'
   styleUrls: ['./detalle-curso.component.css']
 })
 export class DetalleCursoComponent implements OnInit {
-
   id: string | null;
-  curso: Curso[] =[];
+  curso: Curso[] = [];
 
-  constructor(private CursoService:CursoService, private router: Router, private aRouter: ActivatedRoute) {
+  constructor(
+    private cursoService: CursoService,
+    private carritoService: CarritoService,
+    private router: Router,
+    private aRouter: ActivatedRoute
+  ) {
     this.id = this.aRouter.snapshot.paramMap.get('id');
   }
-  
+
   ngOnInit(): void {
     this.obtenerCurso();
   }
 
   obtenerCurso() {
-    if(this.id !== null) {
-      this.CursoService.getUnCurso(this.id).subscribe(
-        res=>{
+    if (this.id !== null) {
+      this.cursoService.getUnCurso(this.id).subscribe(
+        res => {
           this.curso = <any>res;
         },
-        err=>console.log(err)
-      )
+        err => console.log(err)
+      );
     }
   }
 
+  agregarAlCarrito(curso: Curso) {
+    this.carritoService.agregarAlCarrito(curso);
+    this.router.navigate(['/carrito']);
+  }
 }

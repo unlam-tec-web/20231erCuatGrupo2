@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from "@angular/router";
+import { ActivatedRoute, Router } from '@angular/router';
 import { CursoService, Curso } from '../../SERVICES/curso.service';
 import { CarritoService } from '../../SERVICES/carrito.service';
 
@@ -9,32 +9,26 @@ import { CarritoService } from '../../SERVICES/carrito.service';
   styleUrls: ['./carrito.component.css']
 })
 export class CarritoComponent implements OnInit {
-
-  id: string | null;
+  cursosEnCarrito: Curso[] = [];
 
   constructor(
     private cursoService: CursoService,
     public carritoService: CarritoService,
     private router: Router,
     private aRouter: ActivatedRoute
-  ) {
-    this.id = this.aRouter.snapshot.paramMap.get('id');
-  }
+  ) {}
 
   ngOnInit(): void {
-    this.obtenerCurso();
+    this.cursosEnCarrito = this.carritoService.getCursosEnCarrito();
   }
 
-  obtenerCurso() {
-    if (this.id !== null) {
-      this.cursoService.getUnCurso(this.id).subscribe(
-        res => {
-          const curso: Curso = res as Curso;
-          this.carritoService.agregarAlCarrito(curso);
-        },
-        err => console.log(err)
-      );
-    }
+  eliminarCurso(indexCurso: number) {
+    this.carritoService.eliminarDelCarrito(indexCurso);
   }
 
+  vaciarCarrito() {
+    this.carritoService.vaciarCarrito();
+    this.cursosEnCarrito = this.carritoService.getCursosEnCarrito();
+  }
 }
+
