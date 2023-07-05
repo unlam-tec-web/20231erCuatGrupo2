@@ -40,7 +40,7 @@ export class DetalleCursoComponent implements OnInit {
 
   agregarAlCarrito(curso: Curso) {
     this.carritoService.agregarAlCarrito(curso);
-    this.toastr.success('El curso se ha añadido al carrito.', '¡Éxito!');
+   // this.toastr.success('El curso se ha añadido al carrito.', '¡Éxito!');
     this.router.navigate(['/carrito']);
   }
 }

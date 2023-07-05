@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { CursoService, Curso } from '../../SERVICES/curso.service';
+import {  Curso } from '../../SERVICES/curso.service';
 import { CarritoService } from '../../SERVICES/carrito.service';
 
 @Component({
@@ -11,16 +10,9 @@ import { CarritoService } from '../../SERVICES/carrito.service';
 export class CarritoComponent implements OnInit {
   cursosEnCarrito: Curso[] = [];
   sumaTotal: number = 0;
-  mostrarAviso: boolean = false;
-  mensajeAviso: string = '';
-  mostrarMensajeAgregar: boolean = false;
-  mensajeAgregar: string = '';
 
   constructor(
-    private cursoService: CursoService,
     public carritoService: CarritoService,
-    private router: Router,
-    private aRouter: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
@@ -36,14 +28,7 @@ export class CarritoComponent implements OnInit {
   vaciarCarrito() {
     this.carritoService.vaciarCarrito();
     this.cursosEnCarrito = this.carritoService.getCursosEnCarrito();
-    this.calcularSumaTotal(); // Actualizar la suma total
-    // Mostrar el aviso de carrito vaciado
-    this.mostrarAviso = true;
-    this.mensajeAviso = 'El carrito ha sido vaciado';
-    setTimeout(() => {
-      this.mostrarAviso = false;
-      this.mensajeAviso = '';
-    }, 2000); // Ocultar el aviso después de 2 segundos (2000 ms)
+    this.calcularSumaTotal();
   }
 
   private actualizarCarrito() {
