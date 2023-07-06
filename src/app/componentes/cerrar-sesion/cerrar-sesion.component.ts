@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {CognitoService} from "../../SERVICES/cognito.service";
+
 
 @Component({
   selector: 'app-cerrar-sesion',
@@ -8,12 +8,8 @@ import {CognitoService} from "../../SERVICES/cognito.service";
 })
 export class CerrarSesionComponent {
 
-  constructor(private cognitoService: CognitoService) { }
+  constructor() { }
 
-  public ngOnInit(): void {
-    this.cognitoService.signOut().then(() => {
-      console.log("Cerrando sesión..")
-    })
-  }
+
 
 }

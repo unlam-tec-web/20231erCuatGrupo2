@@ -17,16 +17,16 @@ import {ComprarComponent} from "./componentes/comprar/comprar.component";
 const APP_ROUTES: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'registrar', component: RegistrarComponent },
-  { path: 'carrito', component: CarritoComponent },
-  { path: 'cursos', component: CursosComponent},
+  { path: 'carrito', component: CarritoComponent,  canActivate: [RouteGuardService] },
+  { path: 'cursos', component: CursosComponent,  canActivate: [RouteGuardService] },
   { path: 'iniciar-sesion', component: IniciarSesionComponent },
   { path: 'comprar', component: ComprarComponent },
   { path: 'cerrar-sesion', component: CerrarSesionComponent },
-  { path: 'detalle-curso/:id', component: DetalleCursoComponent },
+  { path: 'detalle-curso/:id', component: DetalleCursoComponent,  canActivate: [RouteGuardService] },
   { path: 'codigo-validacion', component: CodigoValidacionComponent },
   { path: 'ingresar-email', component: IngresarEmailComponent },
   { path: 'recuperar-contrasenia', component: RecuperarContraseniaComponent },
-  { path: 'comprar', component: ComprarComponent },
+  { path: 'comprar', component: ComprarComponent,  canActivate: [RouteGuardService] },
   { path: '**', pathMatch: 'full', redirectTo: 'home'},
 ];
 

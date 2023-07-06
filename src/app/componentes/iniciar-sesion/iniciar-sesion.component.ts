@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Router } from "@angular/router";
-import { NavbarComponent} from "../comun/navbar/navbar.component";
+import {AuthService} from "../../SERVICES/auth.service";
 
 @Component({
   selector: 'app-iniciar-sesion',
@@ -9,8 +9,15 @@ import { NavbarComponent} from "../comun/navbar/navbar.component";
   styleUrls: ['./iniciar-sesion.component.css']
 })
 export class IniciarSesionComponent {
-  constructor(protected router: Router, protected httpClient: HttpClient, navbar: NavbarComponent) {
-    if (navbar.jwt != null) { this.router.navigate(['/home']); }
+
+  constructor(
+    private router: Router,
+    private httpClient: HttpClient,
+    private authService:  AuthService
+  ) {
+    if (this.authService.isAuthenticated()) {
+      this.router.navigate(['/home']);
+    }
   }
 
 
@@ -37,11 +44,11 @@ export class IniciarSesionComponent {
         if (response.result.idToken.payload['cognito:groups'] !== undefined) {
           localStorage.setItem('rol', response.result.idToken.payload['cognito:groups'][0]);
         }
-        window.location.reload();
+        this.authService.setAuthenticated(true);
+        this.router.navigate(['/home']);
       },
       error => {
         console.error('Error en la solicitud POST:', error);
-
       }
     );
 
@@ -95,3 +102,19 @@ export interface Response {
   }
 
 }
+
+
+ /* this.httpClient.post<Response>(url, body).subscribe(
+  response => {
+    console.log('Solicitud POST exitosa:', response);
+    localStorage.setItem('jwt', response.result.idToken.jwtToken);
+    if (response.result.idToken.payload['cognito:groups'] !== undefined) {
+      localStorage.setItem('rol', response.result.idToken.payload['cognito:groups'][0]);
+    }
+    window.location.reload();
+  },
+  error => {
+    console.error('Error en la solicitud POST:', error);
+
+  }
+); */
