@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import {Router} from "@angular/router";
-import { CognitoService, IUser} from "../../SERVICES/cognito.service";
-import {Auth} from "aws-amplify";
+import { HttpClient } from "@angular/common/http";
+import { Router } from "@angular/router";
+import { NavbarComponent} from "../comun/navbar/navbar.component";
 
 @Component({
   selector: 'app-iniciar-sesion',
@@ -9,48 +9,89 @@ import {Auth} from "aws-amplify";
   styleUrls: ['./iniciar-sesion.component.css']
 })
 export class IniciarSesionComponent {
-
-  user: IUser;
-
-  constructor(private router: Router, private cognitoService: CognitoService ) {
-    this.user = {} as IUser;
+  constructor(protected router: Router, protected httpClient: HttpClient, navbar: NavbarComponent) {
+    if (navbar.jwt != null) { this.router.navigate(['/home']); }
   }
 
-  public signIn(): void {
-    this.cognitoService.signIn(this.user).then(() => {
-      this.router.navigate(['/home']);
-    }).catch((error) => {
-      switch(error.code){
-        case 'UsuarioNoConfirmadoException':
-          this.router.navigate(['/codigo-validacion'], { queryParams: {'email': this.user.email} });
-          break;
-        case 'NoAutorizadoException':
-          console.log("Usuario no autorizado")
-          break;
+
+  iniciar() {
+    const url = 'http://localhost:4500/apiRegistro/iniciar-sesion';
+
+    const mail = (document.getElementById("mail") as HTMLInputElement).value;
+    console.log(mail)
+    const password = (document.getElementById("contrasenia") as HTMLInputElement).value;
+    console.log(password)
+
+    const body = {
+      mail: mail,
+      password: password
+    };
+
+    console.log(body);
+
+
+    this.httpClient.post<Response>(url, body).subscribe(
+      response => {
+        console.log('Solicitud POST exitosa:', response);
+        localStorage.setItem('jwt', response.result.idToken.jwtToken);
+        if (response.result.idToken.payload['cognito:groups'] !== undefined) {
+          localStorage.setItem('rol', response.result.idToken.payload['cognito:groups'][0]);
+        }
+        window.location.reload();
+      },
+      error => {
+        console.error('Error en la solicitud POST:', error);
 
       }
-    })
+    );
+
   }
+}
 
-  /*myForm: FormGroup;
-
-  constructor(
-    public fb: FormBuilder
-  ) {
-    this.myForm = this.fb.group({
-      mail: ['', [Validators.required]],
-      contrasenia: ['', [Validators.required]],
-
-    });
+export interface Response {
+  result: {
+    idToken: {
+      jwtToken: string,
+      payload: {
+        sub: string,
+        "cognito:groups": [string]
+        email_verified: boolean,
+        iss: string,
+        "cognito:username": string,
+        given_name: string,
+        origin_jti: string,
+        aud: string,
+        event_id: string,
+        token_use: string,
+        auth_time: BigInteger,
+        exp: BigInteger,
+        iat: BigInteger,
+        jti: string,
+        email: string
+      }
+    },
+    refreshToken: {
+      token: string
+    },
+    accessToken: {
+      jwtToken: string,
+      payload: {
+        sub: string,
+        iss: string,
+        client_id: string,
+        scope: string,
+        origin_jti: string,
+        aud: string,
+        event_id: string,
+        token_use: string,
+        auth_time: BigInteger,
+        exp: BigInteger,
+        iat: BigInteger,
+        jti: string,
+        username: string
+      }
+    },
+    clockDrift: BigInteger
   }
-  ngOnInit() { }
-
-  saveData(){
-    console.log(this.myForm.value);
-  }
-
-  /* Falta verificar que los datos esten pasando
-   * Y poner si hay errores mensajes */
-
 
 }

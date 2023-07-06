@@ -1,5 +1,7 @@
 const router = require('express').Router()
 const { query, param, body, checkSchema, validationResult } = require('express-validator');
+const config = require("./credenciales.json");
+//const config = require("./environments/environment")
 const awsConfig = require('./cognito.js');
 const { default: jwtDecode } = require('jwt-decode');
 
@@ -14,7 +16,7 @@ const { default: jwtDecode } = require('jwt-decode');
 
 router.post("/registrar",
   checkSchema(awsConfig.mail_validate),
-  checkSchema(awsConfig.given_name_validate),
+  //checkSchema(awsConfig.given_name_validate),
   checkSchema(awsConfig.password_validate),
   (req, res) => {
     console.log('llego');
@@ -33,9 +35,9 @@ router.post("/registrar",
 
     var username = req.body.mail;
     var password = req.body.password;
-    var given_name = req.body.name;
+   // var given_name = req.body.name;
 
-    var attributeList = awsConfig.setCognitoAttributeList(username, given_name);
+    var attributeList = awsConfig.setCognitoAttributeList(username);
 
     console.log("paso validaciones")
     awsConfig.getUserPool().signUp(username, password, attributeList, null, (error, result) => {
@@ -54,9 +56,9 @@ router.post("/registrar",
 
 router.post("/verificar",
   checkSchema(awsConfig.mail_validate),
-  checkSchema(awsConfig.code_validate),
+ // checkSchema(awsConfig.code_validate),
   (req, res) => {
-    console.log("llego verify")
+    console.log("llego verificar")
     console.log(JSON.stringify(req.body))
     const errors = validationResult(req);
 
@@ -79,6 +81,7 @@ router.post("/verificar",
         res.status(200).json(result);
       }
     });
+
   });
 
 router.post("/iniciar-sesion",

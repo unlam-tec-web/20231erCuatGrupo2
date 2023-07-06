@@ -10,12 +10,12 @@ import { Router } from '@angular/router';
 })
 export class RegistrarComponent {
 
-  /*verify : boolean  = false;
+  verify : boolean  = false;
 
   constructor(protected router: Router, protected httpClient: HttpClient){ }
 
   registrarse(){
-    const url = 'http://localhost:4500/registrar';
+    const url = 'http://localhost:4500/apiRegistro/registrar';
 
     const email = (document.getElementById("mail") as HTMLInputElement).value;
     console.log(email)
@@ -49,16 +49,16 @@ export class RegistrarComponent {
   }
 
   verifyCode(){
-    const url = 'http://localhost:4500/verificar';
+    const url = 'http://localhost:4500/apiRegistro/verificar';
 
     const email = (document.getElementById("mail") as HTMLInputElement).value;
     console.log(email)
-    /*const codigo = (document.getElementById("codigo") as HTMLInputElement).value;
+    const codigo = (document.getElementById("codigo") as HTMLInputElement).value;
     console.log(codigo)
 
     const body = {
       mail : email,
-      //code : codigo
+      code : codigo
     };
 
     console.log(body)
@@ -74,29 +74,8 @@ export class RegistrarComponent {
 
       }
     );
-  }*/
+  }
 }
 
 
-  /*myForm:FormGroup;
-
-  constructor( public fb: FormBuilder ) {
-    this.myForm = this.fb.group({
-      nombre: ['', [Validators.required]],
-      apellido: ['', [Validators.required]],
-      mail: ['', [Validators.required]],
-      contrasenia: ['', [Validators.required]],
-      confirmar: ['', [Validators.required]],
-      fecha: ['', [Validators.required]],
-      direccion: ['', [Validators.required]],
-    });
-  }
-  ngOnInit() { }
-
-  saveData(){
-    console.log(this.myForm.value);
-  }*/
-
-  /* Falta verificar que los datos esten pasando
-  * Y poner si hay errores mensajes */
 

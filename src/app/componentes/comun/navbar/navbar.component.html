@@ -28,19 +28,20 @@
           <a class="nav-link" [routerLink]="['home']">Inicio</a>
         </li>
         <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" *ngIf="!isAuthenticated()" [routerLink]="['registrar']">Registrar</a>
+          <a class="nav-link"  [routerLink]="['registrar']">Registrar</a>
         </li>
         <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" *ngIf="!isAuthenticated()" [routerLink]="['iniciar-sesion']">Iniciar Sesion</a>
+          <a class="nav-link"  [routerLink]="['iniciar-sesion']">Iniciar Sesion</a>
         </li>
         <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" *ngIf="isAuthenticated()" [routerLink]="['cursos']">Cursos</a>
+          <a class="nav-link" [routerLink]="['cursos']">Cursos</a>
         </li>
         <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" *ngIf="isAuthenticated()" [routerLink]="['carrito']">Carrito</a>
+          <a class="nav-link"  [routerLink]="['carrito']">Carrito</a>
         </li>
         <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" *ngIf="isAuthenticated()" routerLink="/cerrar-sesion">Salir</a>
+          <a class="nav-link"  routerLink="/cerrar-sesion">Salir</a>
+         <!-- <a class="w3-bar-item w3-button w3-right" (click)="cerrarSesion()">Cerrar Sesión</a> -->
         </li>
       </ul>
     </div>

@@ -1,9 +1,12 @@
 const express = require('express');
+const cors = require('cors');
 //const cors = require('cors');
 
 const port = process.env.PORT || 4500; // Cambia el puerto a 4500
 
 const app = express();
+
+app.use(cors({ origin: 'http://localhost:4200' }));
 
 app.use(express.json());
 
