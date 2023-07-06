@@ -10,9 +10,9 @@ const { default: jwtDecode } = require('jwt-decode');
   res.send("hola mundo");
 });*/
 
-/*router.post('/login', (req, res) => {
+router.get('/prueba', (req, res) => {
   res.send("holaaa");
-});*/
+});
 
 router.post("/registrar",
   checkSchema(awsConfig.mail_validate),
@@ -147,6 +147,28 @@ router.post("/cerrar-sesion",
       res.status(200).json(response);
     });
   });
+
+router.get('/verificar-token', (req, res) => {
+  const token = req.headers.authorization;
+ // res.send("hola mundo");
+
+  if (!token) {
+    return res.status(401).json({ error: 'Token no proporcionado' });
+  }
+
+  try {
+    const decodedToken = awsConfig.decodeJWTToken(token);
+    // Verificar la validez del token aquí
+    // Puedes validar la fecha de expiración u otras propiedades según tus necesidades
+
+    // Si el token es válido, envía una respuesta exitosa
+    res.status(200).json({ success: true });
+  } catch (error) {
+    // Si el token no es válido, envía una respuesta de error
+    res.status(401).json({ error: 'Token inválido' });
+  }
+});
+
 
 
 module.exports = router;
