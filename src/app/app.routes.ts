@@ -10,9 +10,6 @@ import { IniciarSesionComponent } from "./componentes/iniciar-sesion/iniciar-ses
 import {CerrarSesionComponent} from "./componentes/cerrar-sesion/cerrar-sesion.component";
 import {DetalleCursoComponent} from "./componentes/detalle-curso/detalle-curso.component";
 import {RouteGuardService} from "./SERVICES/route-guard.service";
-import {CodigoValidacionComponent} from "./componentes/codigo-validacion/codigo-validacion.component";
-import {IngresarEmailComponent} from "./componentes/ingresar-email/ingresar-email.component";
-import {RecuperarContraseniaComponent} from "./componentes/recuperar-contrasenia/recuperar-contrasenia.component";
 import {ComprarComponent} from "./componentes/comprar/comprar.component";
 
 
@@ -25,9 +22,6 @@ const APP_ROUTES: Routes = [
   { path: 'comprar', component: ComprarComponent },
   { path: 'cerrar-sesion', component: CerrarSesionComponent },
   { path: 'detalle-curso/:id', component: DetalleCursoComponent,  canActivate: [RouteGuardService] },
-  { path: 'codigo-validacion', component: CodigoValidacionComponent },
-  { path: 'ingresar-email', component: IngresarEmailComponent },
-  { path: 'recuperar-contrasenia', component: RecuperarContraseniaComponent },
   { path: 'comprar', component: ComprarComponent,  canActivate: [RouteGuardService] },
   { path: '**', pathMatch: 'full', redirectTo: 'home'},
 ];
