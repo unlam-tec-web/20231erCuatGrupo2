@@ -39,7 +39,7 @@
 <!--</form>-->
 <!--</body>-->
 <!--</html>-->
-<!doctype html>
+<!--<!doctype html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -54,28 +54,17 @@
   <div class="contenedor">
     <h1>Registrarse</h1>
     <label for="mail">Ingrese su correo electronico</label>
-    <input type="email" id="mail" name="mail" [(ngModel)]="user.email">
+    <input type="email" id="mail" name="mail">
 
     <label for="contrasenia">Escriba su contraseña</label>
-    <input type="password" id="contrasenia" name="contrasenia" [(ngModel)]="user.password">
+    <input type="password" id="contrasenia" name="contrasenia">
 
     <div class="row">
-      <button (click)="signUp()" class="btn btn-success">Registrarse</button>
+      <button (click)="registrarse()" class="btn btn-success">Registrarse</button>
     </div>
-  </div>
-
-  <div class="contenedor" *ngIf="isConfirm">
-    <h1>Confirmar Email</h1>
-    <label for="code">Código</label>
-    <input type="text" id="code" name="code" [(ngModel)]="user.code">
-    <div class="row">
-      <button (click)="confirmSignUp()" class="btn btn-success">Confirmar</button>
-    </div>
-
-    <a href=>Recuperar contraseña</a>
   </div>
 </form>
 
 </body>
-</html>
+</html>-->
 

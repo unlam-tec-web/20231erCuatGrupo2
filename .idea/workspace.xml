@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30a932ea-5167-4fe9-94ff-dd03ccb1daf1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/cognito.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/SERVICES/cognito.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/SERVICES/cognito.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/componentes/iniciar-sesion/iniciar-sesion.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/componentes/iniciar-sesion/iniciar-sesion.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/userRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/userRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/componentes/registrar/registrar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/componentes/registrar/registrar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/componentes/registrar/registrar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/componentes/registrar/registrar.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
