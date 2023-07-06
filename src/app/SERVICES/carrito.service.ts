@@ -17,28 +17,6 @@ export class CarritoService {
     this.guardarCarritoEnLocalStorage();
   }
 
-  /*
-  agregarAlCarrito(curso: Curso) {
-    const cursoExistente = this.cursosEnCarrito.find(c => c.Identificador === curso.Identificador);
-
-    if (cursoExistente) {
-      cursoExistente.Cantidad ? cursoExistente.Cantidad++ : cursoExistente.Cantidad = 1;
-    } else {
-      curso.Cantidad = 1;
-      this.cursosEnCarrito.push(curso);
-    }
-
-    this.guardarCarritoEnLocalStorage();
-    this.mostrarMensajeAgregar = true;
-    this.mensajeAgregar = 'El curso ha sido agregado al carrito';
-
-    setTimeout(() => {
-      this.mostrarMensajeAgregar = false;
-      this.mensajeAgregar = '';
-    }, 2000); // Ocultar el mensaje después de 2 segundos (2000 ms)
-  }
- */
-
 
   vaciarCarrito() {
     this.cursosEnCarrito = [];

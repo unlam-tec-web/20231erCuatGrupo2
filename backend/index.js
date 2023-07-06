@@ -15,6 +15,9 @@ app.set('port',port)
 //rutas
 app.use('/api',require('./rutas'))
 
+app.post('/login', (req, res) => {
+
+});
 //iniciar express
 
 app.listen(app.get('port'), (error) => {

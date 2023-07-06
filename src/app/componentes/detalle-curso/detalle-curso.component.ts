@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import {CursoService, Curso} from '../../SERVICES/curso.service'
-import {CarritoService} from "../../SERVICES/carrito.service";
+import {CarritoService} from '../../SERVICES/carrito.service'
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -18,7 +18,7 @@ export class DetalleCursoComponent implements OnInit {
     private carritoService: CarritoService,
     private router: Router,
     private aRouter: ActivatedRoute,
-    private toastr: ToastrService
+    //private toastr: ToastrService
   ) {
     this.id = this.aRouter.snapshot.paramMap.get('id');
   }
