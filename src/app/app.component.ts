@@ -1,3 +1,5 @@
+
+
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from './SERVICES/auth.service';
 
@@ -26,22 +28,7 @@ export class AppComponent implements OnInit{
     }
   }
 
-  /*ngOnInit(): void {
-    if (this.authService.isAuthenticated()) {
-      this.authService.verifyToken().subscribe(
-        () => {
-          // Token válido, autenticar al usuario
-          this.authService.setAuthenticated(true);
-        },
-        () => {
-          // Token inválido, desautenticar al usuario
-          this.authService.setAuthenticated(false);
-          localStorage.removeItem('jwt');
-          localStorage.removeItem('rol');
-        }
-      );
-    }
-  } */
+
 
 }
 

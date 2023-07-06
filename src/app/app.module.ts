@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -14,7 +15,7 @@ import { CursosComponent } from './componentes/cursos/cursos.component';
 import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
 import { CerrarSesionComponent } from "./componentes/cerrar-sesion/cerrar-sesion.component";
 import { DetalleCursoComponent } from './componentes/detalle-curso/detalle-curso.component';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms"; /*agregado*/
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 import{HttpClientModule} from '@angular/common/http';
 
@@ -61,3 +62,6 @@ import { ToastrModule } from 'ngx-toastr';
 })
 export class AppModule {
 }
+
+
+
