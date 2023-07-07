@@ -13,14 +13,14 @@
 <form method="post">
   <div class="contenedor">
     <h1>Registrarse</h1>
-    <label for="mail">Ingrese su correo electronico</label>
-    <input type="email" id="mail" name="mail">
-
+    <label for="email">Escriba su email</label>
+    <input type="email" id="mail" name="mail" >
     <label for="contrasenia">Escriba su contraseña</label>
     <input type="password" id="contrasenia" name="contrasenia">
+    <small id="error-message"></small>
 
     <div class="row">
-      <button (click)="registrarse()" class="btn btn-success">Registrarse</button>
+      <button (click)="esValido()" (click)="registrarse()"  class="btn btn-success">Registrarse</button>
     </div>
   </div>
 </form>

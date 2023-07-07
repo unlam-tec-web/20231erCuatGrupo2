@@ -16,14 +16,15 @@
         <h1>Iniciar sesión</h1>
         <label for="mail">Ingrese su mail</label>
         <input type="email" id="mail" name="mail">
-
         <label for="contrasenia">Ingrese su contraseña</label>
         <input type="password" id="contrasenia" name="contrasenia">
+        <small id="error-message"></small>
 
+       <br>
         <a routerLink="/ingresar-email" class="link-primary">Recuperar contraseña</a>
         <br>
         <div class="row">
-          <button (click)="iniciar()" class="btn btn-primary">Iniciar Sesión</button>
+          <button (click)="esValido()" (click)="iniciar()" class="btn btn-primary">Iniciar Sesión</button>
         </div>
 
       </div>
