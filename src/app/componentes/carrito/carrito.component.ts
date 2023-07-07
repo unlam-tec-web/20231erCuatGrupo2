@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {  Curso } from '../../SERVICES/curso.service';
-import { CarritoService } from '../../SERVICES/carrito.service'
+import { CarritoService } from '../../SERVICES/carrito.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-carrito',
@@ -10,9 +11,12 @@ import { CarritoService } from '../../SERVICES/carrito.service'
 export class CarritoComponent implements OnInit {
   cursosEnCarrito: Curso[] = [];
   sumaTotal: number = 0;
+  total: number = 0;
+  msjCarrito: string = "El carrito se encuentra vacio.";
 
   constructor(
     public carritoService: CarritoService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -26,13 +30,18 @@ export class CarritoComponent implements OnInit {
   }
 
   vaciarCarrito() {
+    this.total = this.sumaTotal;
     this.carritoService.vaciarCarrito();
     this.cursosEnCarrito = this.carritoService.getCursosEnCarrito();
     this.calcularSumaTotal();
+    this.router.navigate(['/comprar', this.total]);
   }
 
   private actualizarCarrito() {
     this.cursosEnCarrito = this.carritoService.getCursosEnCarrito();
+    if (this.cursosEnCarrito.length != 0) {
+      this.msjCarrito = "";
+    }
     this.calcularSumaTotal();
   }
 

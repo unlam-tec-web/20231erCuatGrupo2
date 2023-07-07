@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-comprar',
@@ -7,7 +8,13 @@ import { Component } from '@angular/core';
 })
 export class ComprarComponent {
 
-  cursos: any[] = [
+  total: string | null;
+
+  constructor(private aRouter: ActivatedRoute) {
+    this.total = this.aRouter.snapshot.paramMap.get('total');
+  }
+
+  /*cursos: any[] = [
     {
       nombre: 'Spring Framework 5',
       precio: 2500.0
@@ -28,5 +35,6 @@ export class ComprarComponent {
 
   rechazarCompra(): void {
     // Lógica para rechazar la compra
-  }
+  }*/
+
 }

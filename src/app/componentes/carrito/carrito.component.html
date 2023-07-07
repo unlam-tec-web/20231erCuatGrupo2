@@ -1,6 +1,9 @@
 <div class="contenedor">
+  <div class="msj-carrito">
+    <p>{{ msjCarrito }}</p>
+  </div>
   <div *ngFor="let curso of carritoService.cursosEnCarrito; let cursoIndex = index">
-    <div class="card mb-3" style="max-width: 840px;">
+    <div class="card mb-3 cuadro-curso" style="max-width: 840px;">
       <div class="row g-0">
         <div class="col-md-4">
           <div>
@@ -8,19 +11,32 @@
           </div>
         </div>
         <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">{{ curso.Nombre }}</h5>
-            <p class="card-text">{{ curso.Descripcion }}</p>
-            <p class="card-text"><small class="text-body-secondary">PRECIO {{ curso.Precio }}$</small></p>
-            <button type="button" class="btn-close" aria-label="Close" (click)="eliminarCurso(cursoIndex)"></button>
+          <div class="card-body descripcion-curso">
+            <div>
+              <h5 class="card-title">{{ curso.Nombre }}</h5>
+              <p class="card-text">{{ curso.Descripcion }}</p>
+              <p class="card-text"><small class="text-body-secondary">PRECIO {{ curso.Precio }}$</small></p>
+            </div>
+            <div>
+              <button type="button" class="btn-close" aria-label="Close" (click)="eliminarCurso(cursoIndex)"></button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="text-center">
-    <p class="fw-bold">Total: {{ sumaTotal }}$</p>
-    <button class="btn btn-danger" (click)="vaciarCarrito()">Comprar</button>
+  <!--<div class="text-center cuadro-compra">
+    <p class="fw-bold fs-5">Total: {{ sumaTotal }}$</p>
+    <button class="btn btn-primary" (click)="vaciarCarrito()">Comprar</button>
+  </div>-->
+  <div class="d-flex justify-content-center">
+    <div class="card text-bg-light cuadro-compra">
+      <div class="card-header">TOTAL DE LA COMPRA</div>
+      <div class="card-body">
+        <p class="fw-bold fs-5 text-center">Total: {{ sumaTotal }}$</p>
+        <button class="btn btn-primary ms-2" (click)="vaciarCarrito()">Realizar compra</button>
+      </div>
+    </div>
   </div>
 </div>
 

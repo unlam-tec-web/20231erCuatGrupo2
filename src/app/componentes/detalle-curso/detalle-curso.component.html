@@ -18,10 +18,10 @@
 				<p id="precioCurso">{{c.Precio}}$</p>
 			</div>
 			<div id="cont3">
-        <button class="btn btn-secondary" (click)="agregarAlCarrito(c)">Añadir al carrito</button>
+        <button class="btn btn-secondary w-100" (click)="agregarAlCarrito(c)">Añadir al carrito</button>
       </div>
 			<div id="cont4">
-				<input class="w-100 btn btn-primary" type="submit" value="Comprar">
+				<a [routerLink]="['/comprar', c.Precio]" class="btn btn-primary w-100 ">Comprar</a>
 			</div>
 			<div id="descripcion">
 				<p id="descTit">Descripción</p>

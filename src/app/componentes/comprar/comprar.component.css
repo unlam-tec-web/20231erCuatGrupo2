@@ -1,14 +1,25 @@
-.contenedor{
-  width: 50%;
-  height: 50%;
-  margin: auto;
-  padding-top: 20px;
+.contenedor {
+    width: 50%;
+    margin: auto;
 }
 
-.card-price{
-  display: flex;
-  justify-content: space-between;
+.msj-exito {
+    background-color: #6ec56a;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding: 80px 0px;
 }
-.card-title{
 
+.cuadro-total {
+    background-color: white;
+    width: 70%;
+    margin: auto;
+    position: relative;
+    bottom: 60px;
+    border-radius: 5px;
+    padding: 50px;
+    -webkit-box-shadow: 0px 0px 10px -4px rgba(140,140,140,1);
+    -moz-box-shadow: 0px 0px 10px -4px rgba(140,140,140,1);
+    box-shadow: 0px 0px 10px -4px rgba(140,140,140,1);
 }

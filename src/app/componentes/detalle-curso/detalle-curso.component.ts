@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import {CursoService, Curso} from '../../SERVICES/curso.service'
-import {CarritoService} from '../../SERVICES/carrito.service'
-import { ToastrService } from 'ngx-toastr';
+import {CursoService, Curso} from '../../SERVICES/curso.service';
+import {CarritoService} from '../../SERVICES/carrito.service';
 
 @Component({
   selector: 'app-detalle-curso',

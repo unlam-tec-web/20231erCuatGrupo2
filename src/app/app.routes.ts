@@ -19,10 +19,9 @@ const APP_ROUTES: Routes = [
   { path: 'carrito', component: CarritoComponent,  canActivate: [RouteGuardService] },
   { path: 'cursos', component: CursosComponent,  canActivate: [RouteGuardService] },
   { path: 'iniciar-sesion', component: IniciarSesionComponent },
-  { path: 'comprar', component: ComprarComponent },
   { path: 'cerrar-sesion', component: CerrarSesionComponent },
   { path: 'detalle-curso/:id', component: DetalleCursoComponent,  canActivate: [RouteGuardService] },
-  { path: 'comprar', component: ComprarComponent,  canActivate: [RouteGuardService] },
+  { path: 'comprar/:total', component: ComprarComponent,  canActivate: [RouteGuardService] },
   { path: '**', pathMatch: 'full', redirectTo: 'home'},
 ];
 
