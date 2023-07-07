@@ -61,6 +61,10 @@ export class HomeComponent implements OnInit {
     { id: 3, name: 'musica' }
   ];
 
+  mostrarMensaje: { [key: string]: boolean } = {};
+  mensajeCategoria: { [key: string]: string } = {};
+
+
   constructor(private CursoService: CursoService) { }
 
   ngOnInit(): void {
@@ -88,6 +92,23 @@ export class HomeComponent implements OnInit {
     }, 5000); // Eliminar el mensaje después de 5 segundos (5000 milisegundos)
   }
 
+  msjCategoria(event: Event, categoria: string): void {
+    event.preventDefault();
+
+    // Aquí verificas si el usuario está logueado o no.
+    // Por ahora, asumamos que la variable 'estaLogueado' es un booleano que indica si el usuario está logueado.
+    const estaLogueado: boolean = false;
+
+    if (!estaLogueado) {
+      this.mostrarMensaje[categoria] = true;
+      this.mensajeCategoria[categoria] = 'Debe iniciar sesión para acceder a esta categoría';
+
+      setTimeout(() => {
+        this.mostrarMensaje[categoria] = false;
+        this.mensajeCategoria[categoria] = '';
+      }, 5000); // Eliminar el mensaje después de 5 segundos (5000 milisegundos)
+    }
+  }
 
   prueba() {
     console.log(this.ultimosCuatro);
