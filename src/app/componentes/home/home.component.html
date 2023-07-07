@@ -35,9 +35,34 @@
 
 </div>
 
-
-
 <!-- CATEGORÍAS -->
+<div class="cont-index-3">
+  <h2>Categorías</h2>
+  <div class="categorias-index">
+    <div class="cat-index">
+      <a [routerLink]="['/cursos']" [queryParams]="{categoria: 'diseno'}" style="text-decoration: none;">
+        <img src="assets/img/cat-diseño.jpg">
+        <p>Diseño</p>
+      </a>
+    </div>
+    <div class="cat-index">
+      <a [routerLink]="['/cursos']" [queryParams]="{categoria: 'programacion'}" style="text-decoration: none;">
+        <img src="assets/img/cat-programacion.jpg">
+        <p>Programación</p>
+      </a>
+    </div>
+    <div class="cat-index">
+      <a [routerLink]="['/cursos']" [queryParams]="{categoria: 'musica'}" style="text-decoration: none;">
+        <img src="assets/img/cat-musica.jpg">
+        <p>Música</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+<!--
 <div class="cont-index-3">
 
     <h2>Categorías</h2>
@@ -65,3 +90,4 @@
         </div>
     </div>
 </div>
+-->
