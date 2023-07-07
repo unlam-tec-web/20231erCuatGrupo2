@@ -72,14 +72,6 @@ export class HomeComponent implements OnInit {
     this.prueba();
     this.listarCategorias();
   }
-/*
-  msjDetalle() {
-    console.log("mensaje de que no puede ir si no esta registrado")
-    const errorMessageElement = document.getElementById(
-      'error-message'
-    ) as HTMLInputElement;
-    errorMessageElement.textContent = 'No puede ingresar si no esta registrado';
-  } */
 
   msjDetalle(event: Event, curso: Curso) {
     event.preventDefault();
@@ -95,8 +87,6 @@ export class HomeComponent implements OnInit {
   msjCategoria(event: Event, categoria: string): void {
     event.preventDefault();
 
-    // Aquí verificas si el usuario está logueado o no.
-    // Por ahora, asumamos que la variable 'estaLogueado' es un booleano que indica si el usuario está logueado.
     const estaLogueado: boolean = false;
 
     if (!estaLogueado) {
@@ -106,7 +96,7 @@ export class HomeComponent implements OnInit {
       setTimeout(() => {
         this.mostrarMensaje[categoria] = false;
         this.mensajeCategoria[categoria] = '';
-      }, 5000); // Eliminar el mensaje después de 5 segundos (5000 milisegundos)
+      }, 5000);
     }
   }
 
