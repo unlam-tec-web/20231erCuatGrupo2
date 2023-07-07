@@ -42,3 +42,20 @@ input[type="submit"] {
 #error-message {
   color: red;
 }
+
+.verify-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 12px;
+}
+.verify-container p {
+  font-size: 16px;
+}
+
+.verify-container label {
+  font-size: 16px;
+}

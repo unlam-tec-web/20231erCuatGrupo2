@@ -25,9 +25,11 @@
         <form action="verMediosDePago" method="POST" id="compraCursoCalificado">
           <input type="hidden" name="id_curso" [value]="curso.Identificador">
           <input type="hidden" name="precio" [value]="curso.Precio">
-          <a [routerLink]="['/detalle-curso', curso.Identificador]" class="btn btn-secondary">Ver detalle</a>&nbsp;&nbsp;
+          <a [routerLink]="['/detalle-curso', curso.Identificador]"  (click)="msjDetalle($event, curso)" class="btn btn-secondary">Ver detalle</a>&nbsp;&nbsp;
         </form>
+        <p *ngIf="curso.MostrarMensaje" class="error-message">{{ curso.Mensaje }}</p>
       </div>
+
     </div>
   </div>
 

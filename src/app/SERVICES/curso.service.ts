@@ -63,5 +63,7 @@ export interface Curso{
   Nombre?:string;
   Precio?:number;
   Cantidad?:number;
+  MostrarMensaje?:boolean;
+  Mensaje?:string;
 
 }

@@ -192,3 +192,6 @@ input[type="text"]:focus, textarea:focus {
 	color: #5e5e5e;
 	font-weight: 500;
 }
+.error-message {
+  color: red;
+}

@@ -68,6 +68,26 @@ export class HomeComponent implements OnInit {
     this.prueba();
     this.listarCategorias();
   }
+/*
+  msjDetalle() {
+    console.log("mensaje de que no puede ir si no esta registrado")
+    const errorMessageElement = document.getElementById(
+      'error-message'
+    ) as HTMLInputElement;
+    errorMessageElement.textContent = 'No puede ingresar si no esta registrado';
+  } */
+
+  msjDetalle(event: Event, curso: Curso) {
+    event.preventDefault();
+    curso.MostrarMensaje = true;
+    curso.Mensaje = 'No puede ingresar si no está registrado';
+
+    setTimeout(() => {
+      curso.MostrarMensaje = false;
+      curso.Mensaje = '';
+    }, 5000); // Eliminar el mensaje después de 5 segundos (5000 milisegundos)
+  }
+
 
   prueba() {
     console.log(this.ultimosCuatro);

@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="es">
 <head>
@@ -6,26 +5,26 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Iniciar Sesion</title>
+  <title>Iniciar Sesión</title>
 </head>
 <body>
 
 <form method="post">
   <div class="contenedor">
     <h1>Registrarse</h1>
-    <label for="email">Escriba su email</label>
-    <input type="email" id="mail" name="mail" >
+    <label for="mail">Escriba su email</label>
+    <input type="email" id="mail" name="mail">
     <label for="contrasenia">Escriba su contraseña</label>
     <input type="password" id="contrasenia" name="contrasenia">
     <p id="error-message"></p>
 
     <div class="row">
-      <button (click)="esValido()" (click)="registrarse()"  class="btn btn-success">Registrarse</button>
+      <button (click)="esValido()" (click)="registrarse()" class="btn btn-success">Registrarse</button>
     </div>
   </div>
 </form>
 
-<div class="w3-container w3-content" style="margin-top: 15px; margin-bottom: 15px; " *ngIf="verify">
+<div class="verify-container" *ngIf="verify">
   <div class="w3-card-4">
     <div class="w3-container w3-blue">
       <h1 class="w3-center">Verificación de Correo Electrónico</h1>
@@ -37,14 +36,14 @@
         <input id="codigo" class="w3-input" type="text" id="codigo" name="codigo" placeholder="Introduce el código aquí">
         <br>
         <div class="w3-center">
-          <button class="w3-button w3-blue" type="submit" (click)="verifyCode()">Verificar</button>
+          <button class="btn btn-success" type="submit" (click)="verifyCode()">Verificar</button>
         </div>
       </form>
     </div>
   </div>
 </div>
 
-
 </body>
 </html>
+
 
