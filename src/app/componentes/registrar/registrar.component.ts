@@ -22,38 +22,38 @@ export class RegistrarComponent {
       'contrasenia'
     ) as HTMLInputElement).value;
     console.log(contrasenia);
-  
+
     let emailValido: boolean = false;
     if (email != null) {
       const emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
       emailValido = emailRegex.test(email);
     }
-  
+
     let contraseniaValida: boolean = false;
     if (contrasenia != null) {
       contraseniaValida = contrasenia.length >= 8;
     }
-  
+
     const errorMessageElement = document.getElementById(
       'error-message'
     ) as HTMLInputElement;
-  
+
     if (!emailValido) {
       errorMessageElement.textContent =
         'Ingrese una dirección de correo electrónico válida.';
       return;
     }
-  
+
     if (!contraseniaValida) {
       errorMessageElement.textContent =
         'La contraseña debe tener al menos 8 caracteres.';
       return;
     }
-  
+
     errorMessageElement.textContent = '';
   }
-  
-  
+
+
 
   registrarse(){
     const url = 'http://localhost:4500/apiRegistro/registrar';
@@ -108,7 +108,7 @@ export class RegistrarComponent {
       response => {
         console.log('Solicitud POST exitosa:', response);
         this.verify = true;
-        this.router.navigate(['/home']);
+        this.router.navigate(['/iniciar-sesion']);
       },
       error => {
         console.error('Error en la solicitud POST:', error);
